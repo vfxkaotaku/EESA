@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration | Present Around The Network</title>
+    <!-- Modern UI - Enhanced Mobile Responsiveness -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -11,7 +12,7 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
+            background-color: #0d0d0d;
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -28,212 +29,239 @@
 
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .input-field {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .input-field:focus {
             border-color: #D4AF37;
             background: rgba(255, 255, 255, 0.08);
             outline: none;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
         }
 
         .disabled-btn {
-            background: #2a2a2a !important;
+            background: #222 !important;
             cursor: not-allowed;
-            opacity: 0.5;
-            color: #666;
+            opacity: 0.6;
+            color: #777;
         }
 
         html { scroll-behavior: smooth; }
 
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-track { background: #0d0d0d; }
         ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
-
-        .logo-container img {
-            max-height: 50px;
-            object-fit: contain;
-        }
-        @media (min-width: 768px) {
-            .logo-container img { max-height: 70px; }
-        }
     </style>
 </head>
 <body class="min-h-screen selection:bg-[#D4AF37]/30">
 
-    <!-- Header Section with Logos -->
-    <header class="pt-6 pb-10 md:pt-8 md:pb-16 px-6 border-b border-white/5 bg-[#121212]">
-        <div class="max-w-6xl mx-auto flex justify-between items-center mb-10 logo-container">
-            <!-- MVPS Logo -->
-            <img src="Black Brown Illustration Debate Competition Poster (3).jpg" alt="MVPS Logo" class="w-auto h-12 md:h-20">
-            
-            <!-- IET Logo -->
-            <div class="bg-white px-3 py-1 rounded-md">
-                <img src="Black Brown Illustration Debate Competition Poster (1).png" alt="IET Logo" class="w-auto h-8 md:h-14">
-            </div>
-            
-            <!-- EESA Logo -->
-            <img src="Black Brown Illustration Debate Competition Poster.png" alt="EESA Logo" class="w-auto h-12 md:h-20">
-        </div>
+    <!-- Header Section -->
+    <header class="pt-8 pb-12 px-6 border-b border-white/5 bg-[#121212] relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-yellow-500/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-yellow-500/5 blur-[120px] rounded-full"></div>
 
-        <div class="text-center">
-            <div class="inline-block px-4 py-1 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-widest uppercase mb-4">
-                EESA KBTCOE Presents
-            </div>
-            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight uppercase">
-                PRESENT AROUND <br class="hidden sm:block">
+        <div class="text-center relative z-10 mt-8">
+            <h1 class="text-4xl md:text-7xl font-black mb-4 tracking-tighter leading-[0.9] uppercase italic">
+                PRESENT AROUND <br>
                 <span class="gold-gradient">THE NETWORK</span>
             </h1>
-            <p class="text-gray-400 max-w-xl mx-auto text-xs sm:text-sm md:text-base px-2">
-                Institute Level Presentation Competition. Encouraging technical excellence, professional communication, and innovative thinking.
+            <div class="w-24 h-1 gold-bg mx-auto mb-6 rounded-full"></div>
+            <p class="text-gray-400 max-w-2xl mx-auto text-xs sm:text-sm md:text-lg font-medium px-4 tracking-wide">
+                INSTITUTE LEVEL PRESENTATION COMPETITION
+            </p>
+            <p class="text-[#D4AF37] text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mt-4 opacity-80">
+                Encourage Technical Excellence & Innovative Thinking
             </p>
         </div>
     </header>
 
-    <!-- Event Quick Info -->
-    <section class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 px-4 sm:px-6 -mt-6 md:-mt-8">
-        <div class="glass-card p-3 md:p-4 rounded-xl text-center">
-            <i data-lucide="calendar" class="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1 md:mb-2 text-[#D4AF37]"></i>
-            <h3 class="text-[9px] md:text-xs uppercase text-gray-500 font-bold tracking-tighter">Date</h3>
-            <p class="text-xs md:text-base font-semibold">07 March</p>
+    <!-- Event Metrics -->
+    <section class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 px-4 sm:px-6 -mt-6 md:-mt-8 relative z-20">
+        <div class="glass-card p-4 rounded-2xl text-center">
+            <i data-lucide="calendar" class="w-5 h-5 mx-auto mb-2 text-[#D4AF37]"></i>
+            <h3 class="text-[10px] uppercase text-gray-500 font-bold">Event Date</h3>
+            <p class="text-sm md:text-lg font-bold uppercase">07 March</p>
         </div>
-        <div class="glass-card p-3 md:p-4 rounded-xl text-center">
-            <i data-lucide="clock" class="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1 md:mb-2 text-[#D4AF37]"></i>
-            <h3 class="text-[9px] md:text-xs uppercase text-gray-500 font-bold tracking-tighter">Time</h3>
-            <p class="text-xs md:text-base font-semibold">10:00 AM</p>
+        <div class="glass-card p-4 rounded-2xl text-center">
+            <i data-lucide="clock" class="w-5 h-5 mx-auto mb-2 text-[#D4AF37]"></i>
+            <h3 class="text-[10px] uppercase text-gray-500 font-bold">Reporting</h3>
+            <p class="text-sm md:text-lg font-bold uppercase">10:00 AM</p>
         </div>
-        <div class="glass-card p-3 md:p-4 rounded-xl text-center">
-            <i data-lucide="map-pin" class="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1 md:mb-2 text-[#D4AF37]"></i>
-            <h3 class="text-[9px] md:text-xs uppercase text-gray-500 font-bold tracking-tighter">Location</h3>
-            <p class="text-[10px] md:text-sm font-semibold leading-tight">C-Bldg, 4th Fl</p>
+        <div class="glass-card p-4 rounded-2xl text-center">
+            <i data-lucide="map-pin" class="w-5 h-5 mx-auto mb-2 text-[#D4AF37]"></i>
+            <h3 class="text-[10px] uppercase text-gray-500 font-bold">Venue</h3>
+            <p class="text-xs md:text-sm font-bold leading-tight">C-Bldg, 4th Fl, Electrical Dept.</p>
         </div>
-        <div class="glass-card p-3 md:p-4 rounded-xl text-center">
-            <i data-lucide="award" class="w-4 h-4 md:w-5 md:h-5 mx-auto mb-1 md:mb-2 text-[#D4AF37]"></i>
-            <h3 class="text-[9px] md:text-xs uppercase text-gray-500 font-bold tracking-tighter">Fee</h3>
-            <p class="text-xs md:text-base font-semibold">₹ 50/-</p>
+        <div class="glass-card p-4 rounded-2xl text-center">
+            <i data-lucide="award" class="w-5 h-5 mx-auto mb-2 text-[#D4AF37]"></i>
+            <h3 class="text-[10px] uppercase text-gray-500 font-bold">Entry Fee</h3>
+            <p class="text-sm md:text-lg font-bold uppercase">₹ 50/-</p>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto py-8 md:py-12 px-4 sm:px-6">
-        <div id="form-container" class="glass-card rounded-2xl overflow-hidden shadow-2xl transition-all duration-500">
+    <main class="max-w-5xl mx-auto py-10 md:py-16 px-4 sm:px-6">
+        <!-- Form Container -->
+        <div id="form-container" class="glass-card rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700">
             <div class="grid lg:grid-cols-5">
-                <div class="lg:col-span-3 p-6 sm:p-8 md:p-10">
-                    <h2 class="text-xl md:text-2xl font-bold mb-6 flex items-center text-white">
-                        <i data-lucide="user-plus" class="w-5 h-5 md:w-6 md:h-6 mr-3 text-[#D4AF37]"></i>
-                        Participant Information
+                
+                <!-- Registration Fields -->
+                <div class="lg:col-span-3 p-8 sm:p-12">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-8 flex items-center tracking-tight text-white">
+                        <span class="w-10 h-10 gold-bg text-black rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </span>
+                        Registration
                     </h2>
-                    <div id="registrationForm" class="space-y-4 md:space-y-6">
-                        <div class="space-y-1">
-                            <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase ml-1 tracking-wider">Full Name</label>
-                            <input type="text" id="fullName" placeholder="Enter your full name" required class="input-field w-full px-4 py-3 md:py-4 rounded-xl text-sm md:text-base text-white">
+                    
+                    <div id="registrationForm" class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-500 uppercase ml-1 tracking-[0.1em]">Student Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter name as per ID card" required class="input-field w-full px-5 py-4 rounded-2xl text-white text-base">
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase ml-1 tracking-wider">Department & Year</label>
-                                <input type="text" id="department" placeholder="e.g. Electrical BE" required class="input-field w-full px-4 py-3 md:py-4 rounded-xl text-sm md:text-base text-white">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[11px] font-bold text-gray-500 uppercase ml-1 tracking-[0.1em]">Dept & Year</label>
+                                <input type="text" id="department" placeholder="e.g. Electrical BE" required class="input-field w-full px-5 py-4 rounded-2xl text-white text-base">
                             </div>
-                            <div class="space-y-1">
-                                <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase ml-1 tracking-wider">WhatsApp No.</label>
-                                <input type="tel" id="whatsapp" placeholder="10 Digit Number" required class="input-field w-full px-4 py-3 md:py-4 rounded-xl text-sm md:text-base text-white">
+                            <div class="space-y-2">
+                                <label class="text-[11px] font-bold text-gray-500 uppercase ml-1 tracking-[0.1em]">WhatsApp Number</label>
+                                <input type="tel" id="whatsapp" placeholder="10-digit number" required class="input-field w-full px-5 py-4 rounded-2xl text-white text-base">
                             </div>
                         </div>
-                        <div class="space-y-1">
-                            <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase ml-1 tracking-wider">Presentation Topic</label>
-                            <input type="text" id="topic" placeholder="Name of your technical topic" required class="input-field w-full px-4 py-3 md:py-4 rounded-xl text-sm md:text-base text-white">
+
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-500 uppercase ml-1 tracking-[0.1em]">Presentation Topic Title</label>
+                            <input type="text" id="topic" placeholder="Your technical presentation title" required class="input-field w-full px-5 py-4 rounded-2xl text-white text-base">
                         </div>
-                        <div class="pt-4 border-t border-white/5">
-                            <h3 class="text-xs md:text-sm font-bold text-[#D4AF37] mb-2 uppercase tracking-wide">Topic Guideline:</h3>
-                            <p class="text-[11px] md:text-xs text-gray-500 leading-relaxed italic">
-                                "Open your Interests – Technical". Presentations are strictly limited to <span class="text-white font-medium">10 minutes</span> per student.
+
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                            <h4 class="text-xs font-bold text-[#D4AF37] mb-3 uppercase tracking-widest flex items-center">
+                                <i data-lucide="info" class="w-4 h-4 mr-2"></i> Guideline
+                            </h4>
+                            <p class="text-xs text-gray-400 leading-relaxed italic">
+                                "Open your Interests – Technical". Presentations are strictly limited to <span class="text-white font-bold">10 minutes</span> per student. Individual entries only.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-2 bg-[#161616] p-6 sm:p-8 md:p-10 border-t lg:border-t-0 lg:border-l border-white/5">
-                    <h2 class="text-lg md:text-xl font-bold mb-6 flex items-center text-white">
-                        <i data-lucide="qr-code" class="w-5 h-5 md:w-6 md:h-6 mr-3 text-[#D4AF37]"></i>
-                        Payment Gate
+                <!-- Payment Sidebar -->
+                <div class="lg:col-span-2 bg-neutral-900/50 p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-white/10">
+                    <h2 class="text-xl font-extrabold mb-8 flex items-center text-white">
+                        <i data-lucide="shield-check" class="w-6 h-6 mr-3 text-[#D4AF37]"></i>
+                        Verification
                     </h2>
-                    <div class="text-center mb-8">
-                        <div class="bg-white p-2 md:p-3 rounded-2xl inline-block shadow-2xl transition-transform duration-300">
-                            <img src="WhatsApp Image 2026-02-27 at 11.47.50 PM.jpeg" alt="PhonePe QR Code" class="w-32 h-32 md:w-44 md:h-44 object-contain">
+
+                    <div class="text-center mb-10">
+                        <div class="bg-white p-3 rounded-3xl inline-block shadow-2xl transition-transform duration-500">
+                            <img src="WhatsApp Image 2026-02-27 at 11.47.50 PM.jpeg" alt="Payment QR" class="w-40 h-40 md:w-52 md:h-52 object-contain rounded-xl">
                         </div>
-                        <div class="mt-4 space-y-1">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-bold">Scan to pay ₹50</p>
-                            <p class="text-[9px] text-gray-600 font-medium font-mono uppercase tracking-tighter tracking-widest">Official PhonePe QR</p>
+                        <div class="mt-5">
+                            <p class="text-[11px] text-gray-500 uppercase tracking-[0.2em] font-black">Scan to Pay ₹50</p>
                         </div>
                     </div>
-                    <div class="space-y-4 md:space-y-5">
-                        <div class="space-y-1">
-                            <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-wider">12-Digit UTR/Txn ID</label>
-                            <input type="text" id="utr" maxlength="12" placeholder="Enter Transaction ID" class="input-field w-full px-4 py-3 rounded-xl text-sm">
+
+                    <div class="space-y-5">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">12-Digit Transaction UTR</label>
+                            <input type="text" id="utr" maxlength="12" placeholder="Ex: 4056..." class="input-field w-full px-5 py-3 rounded-xl text-sm font-mono tracking-widest">
                         </div>
-                        <div class="space-y-1">
-                            <label class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-wider">Payment Screenshot</label>
-                            <label class="flex flex-col items-center justify-center w-full h-28 md:h-32 border-2 border-dashed border-white/10 rounded-2xl cursor-pointer hover:border-[#D4AF37]/50 transition bg-white/5 group">
-                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <i data-lucide="upload-cloud" id="uploadIcon" class="w-6 h-6 md:w-8 md:h-8 text-gray-400 mb-2 group-hover:text-[#D4AF37] transition"></i>
-                                    <p id="fileName" class="text-[10px] md:text-xs text-gray-500 text-center px-4 leading-tight">Attach screenshot of payment</p>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Upload Screenshot First</label>
+                            <label for="screenshot" class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-white/10 rounded-2xl cursor-pointer hover:border-[#D4AF37]/50 transition-all bg-white/5 group overflow-hidden relative">
+                                <div id="uploadPlaceholder" class="flex flex-col items-center justify-center py-4 pointer-events-none">
+                                    <i data-lucide="image" class="w-8 h-8 text-gray-500 mb-2 group-hover:text-[#D4AF37] transition"></i>
+                                    <p class="text-[10px] text-gray-500 text-center uppercase font-bold tracking-tighter">Tap to Select File</p>
                                 </div>
+                                <img id="previewImg" class="hidden h-full w-full object-cover" src="#" alt="Preview">
                                 <input type="file" id="screenshot" class="hidden" accept="image/*" />
                             </label>
                         </div>
-                        <button type="button" id="submitBtn" disabled class="disabled-btn w-full gold-bg text-black font-extrabold py-4 rounded-xl shadow-xl transform active:scale-95 transition-all duration-300 flex items-center justify-center text-sm md:text-base tracking-widest uppercase">
-                            REGISTER NOW
+
+                        <button type="button" id="submitBtn" disabled class="disabled-btn w-full gold-bg text-black font-black py-4 rounded-2xl shadow-2xl transform active:scale-95 transition-all duration-300 flex items-center justify-center text-sm tracking-[0.1em] uppercase">
+                            FILL ALL FIELDS
                         </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="success-container" class="hidden text-center py-10 md:py-16 glass-card rounded-2xl p-6 sm:p-10 border-[#D4AF37]/40 max-w-2xl mx-auto animate-in fade-in zoom-in duration-500">
-            <div class="w-16 h-16 md:w-24 md:h-24 gold-bg rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                <i data-lucide="check" class="text-black w-8 h-8 md:w-12 md:h-12 stroke-[3px]"></i>
+        <!-- Final Success State -->
+        <div id="success-container" class="hidden text-center py-16 md:py-24 glass-card rounded-[3rem] p-8 md:p-12 border-[#D4AF37]/40 max-w-2xl mx-auto animate-in fade-in zoom-in duration-700">
+            <div class="w-20 h-20 gold-bg rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-[0_0_50px_rgba(212,175,55,0.3)] rotate-12">
+                <i data-lucide="check" class="text-black w-10 h-10 stroke-[4px]"></i>
             </div>
-            <h2 class="text-2xl md:text-4xl font-extrabold mb-3 text-white">Registration Processed!</h2>
-            <p class="text-[#D4AF37] text-sm md:text-lg font-bold mb-6 tracking-wide uppercase">Final Step: Send Receipt to Organizer</p>
-            <div class="bg-white/5 p-5 md:p-8 rounded-2xl text-left mb-8 border border-white/5">
-                <p class="text-xs md:text-sm text-gray-400 mb-6 leading-relaxed italic">
-                    "WhatsApp will open with your details. <span class="text-white font-bold underline decoration-[#D4AF37]">Please attach your payment screenshot</span> to that message manually before sending it to President Parth."
-                </p>
-                <div class="flex flex-col gap-3">
-                    <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-4 md:py-5 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl transition transform hover:-translate-y-1 active:scale-95">
-                        <i data-lucide="send" class="w-5 h-5"></i>
-                        SEND RECEIPT TO PARTH
-                    </button>
-                    <a href="https://chat.whatsapp.com/I5GkzrYLAHD9ld45ooU2P8" target="_blank" class="w-full border-2 border-[#D4AF37]/50 text-[#D4AF37] py-4 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#D4AF37]/10 transition">
-                        <i data-lucide="users" class="w-5 h-5"></i>
-                        JOIN OFFICIAL GROUP
-                    </a>
+            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tighter">DATA RECORDED!</h2>
+            <p class="text-gray-400 text-sm md:text-lg mb-10 max-w-sm mx-auto font-medium">To complete your entry, follow these two steps:</p>
+            
+            <div class="grid grid-cols-1 gap-4 text-left max-w-md mx-auto">
+                <div class="bg-white/5 p-6 rounded-3xl border border-white/5">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-black flex-shrink-0 flex items-center justify-center font-bold">1</div>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-1 uppercase">Open WhatsApp</p>
+                            <p class="text-xs text-gray-400">Click the green button below. Your details are already typed for you.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="bg-white/5 p-6 rounded-3xl border border-white/5">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/10 text-white flex-shrink-0 flex items-center justify-center font-bold">2</div>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-1 uppercase">Attach Screenshot</p>
+                            <p class="text-xs text-gray-400 italic">In WhatsApp, tap the "Attach" icon and select your receipt before sending.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="sendToWhatsApp()" class="mt-4 w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-5 rounded-3xl font-black flex items-center justify-center gap-3 shadow-2xl transition transform hover:-translate-y-1">
+                    <i data-lucide="send" class="w-6 h-6"></i>
+                    SEND TO PARTH
+                </button>
+                
+                <a href="https://chat.whatsapp.com/I5GkzrYLAHD9ld45ooU2P8" target="_blank" class="w-full border-2 border-white/10 text-white hover:border-[#D4AF37] hover:text-[#D4AF37] py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    JOIN OFFICIAL GROUP
+                </a>
             </div>
-            <p class="text-gray-600 text-[8px] md:text-[10px] mt-6 uppercase tracking-[3px] md:tracking-[5px]">EESA KBTCOE • NASHIK</p>
+            <p class="text-gray-700 text-[9px] mt-12 uppercase font-black tracking-[0.6em]">EESA KBTCOE NASHIK</p>
         </div>
     </main>
 
-    <footer class="bg-[#0f0f0f] py-10 md:py-16 px-6 border-t border-white/5">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
-            <div class="text-center md:text-left">
-                <h4 class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4 tracking-[3px]">Event Organizers</h4>
-                <div class="space-y-3">
-                    <p class="text-xs md:text-sm text-white">Parth Ahirrao (President): <a href="tel:8087872903" class="text-[#D4AF37] font-mono hover:underline tracking-widest">8087872903</a></p>
-                    <p class="text-xs md:text-sm text-white">Ayush Nikam (GS): <a href="tel:8856828331" class="text-[#D4AF37] font-mono hover:underline tracking-widest">8856828331</a></p>
+    <!-- Footer -->
+    <footer class="bg-[#0a0a0a] py-16 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+            <div>
+                <h4 class="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-6">Connect with Organizers</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-[#D4AF37]"></i>
+                        </div>
+                        <p class="text-xs md:text-sm text-white font-medium">Parth Ahirrao: <a href="tel:8087872903" class="text-[#D4AF37] font-mono ml-2">8087872903</a></p>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-[#D4AF37]"></i>
+                        </div>
+                        <p class="text-xs md:text-sm text-white font-medium">Ayush Nikam: <a href="tel:8856828331" class="text-[#D4AF37] font-mono ml-2">8856828331</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="text-center md:text-right border-t md:border-t-0 border-white/5 pt-8 md:pt-0 w-full md:w-auto">
-                <h2 class="font-black text-2xl md:text-3xl mb-1 tracking-tighter italic text-white uppercase tracking-tighter">EESA</h2>
-                <p class="text-[9px] md:text-xs text-gray-500 uppercase font-bold tracking-[3px] md:tracking-[5px] leading-tight">
-                    Electrical Engineering<br>Student Association
-                </p>
+            <div class="flex flex-col items-center md:items-end">
+                <img src="Black Brown Illustration Debate Competition Poster.png" alt="EESA Small" class="h-16 mb-4 opacity-50 grayscale">
+                <h2 class="font-black text-2xl tracking-tighter italic text-white uppercase">EESA</h2>
+                <p class="text-[9px] text-gray-600 uppercase font-black tracking-[4px]">ESTD 1999</p>
             </div>
         </div>
     </footer>
@@ -243,14 +271,14 @@
         const utrInput = document.getElementById('utr');
         const screenshotInput = document.getElementById('screenshot');
         const submitBtn = document.getElementById('submitBtn');
-        const fileNameDisplay = document.getElementById('fileName');
-        const uploadIcon = document.getElementById('uploadIcon');
+        const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+        const previewImg = document.getElementById('previewImg');
         const formContainer = document.getElementById('form-container');
         const successContainer = document.getElementById('success-container');
 
-        let regData = {};
+        let sharedData = {};
 
-        function validateForm() {
+        function validate() {
             const name = document.getElementById('fullName').value.trim();
             const dept = document.getElementById('department').value.trim();
             const phone = document.getElementById('whatsapp').value.trim();
@@ -258,53 +286,75 @@
             const utr = utrInput.value.trim();
             const hasFile = screenshotInput.files.length > 0;
 
-            const isFormReady = name && dept && phone.length >= 10 && topic && utr.length === 12 && hasFile;
-
-            if (isFormReady) {
+            // Updated logic for button feedback
+            if (!name || !dept || !phone || !topic) {
+                submitBtn.innerText = "FILL ALL FIELDS";
+            } else if (!hasFile) {
+                submitBtn.innerText = "UPLOAD SCREENSHOT";
+            } else if (utr.length < 10) {
+                submitBtn.innerText = "ENTER VALID UTR";
+            } else {
+                submitBtn.innerText = "REGISTER NOW";
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('disabled-btn');
-                regData = { name, dept, phone, topic, utr };
-            } else {
-                submitBtn.disabled = true;
-                submitBtn.classList.add('disabled-btn');
+                sharedData = { name, dept, phone, topic, utr };
+                return;
             }
+
+            submitBtn.disabled = true;
+            submitBtn.classList.add('disabled-btn');
         }
 
+        // Attach listeners to all inputs for real-time validation
         document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', validateForm);
+            input.addEventListener('input', validate);
+            input.addEventListener('change', validate);
         });
 
+        // Specific UTR cleaning
         utrInput.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/[^0-9]/g, '');
-            validateForm();
         });
 
+        // Screenshot preview logic
         screenshotInput.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) {
-                fileNameDisplay.textContent = "✓ Receipt Uploaded";
-                fileNameDisplay.classList.add('text-[#D4AF37]', 'font-bold');
-                uploadIcon.classList.add('text-[#D4AF37]');
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    previewImg.src = event.target.result;
+                    previewImg.classList.remove('hidden');
+                    uploadPlaceholder.classList.add('hidden');
+                };
+                reader.readAsDataURL(file);
             }
-            validateForm();
         });
 
         function sendToWhatsApp() {
             const message = `*EVENT REGISTRATION: PRESENT AROUND THE NETWORK*%0A%0A` +
-                            `*Name:* ${regData.name}%0A` +
-                            `*Dept/Year:* ${regData.dept}%0A` +
-                            `*WhatsApp:* ${regData.phone}%0A` +
-                            `*Topic:* ${regData.topic}%0A` +
-                            `*UTR No:* ${regData.utr}%0A%0A` +
+                            `*Student:* ${sharedData.name}%0A` +
+                            `*Dept/Year:* ${sharedData.dept}%0A` +
+                            `*WhatsApp:* ${sharedData.phone}%0A` +
+                            `*Topic:* ${sharedData.topic}%0A` +
+                            `*UTR No:* ${sharedData.utr}%0A%0A` +
                             `_Sending this as proof of registration. Attached screenshot follows._`;
+            
             window.open(`https://wa.me/918087872903?text=${message}`, '_blank');
         }
 
+        // Handle the Submit button click
         submitBtn.addEventListener('click', () => {
-            submitBtn.innerHTML = `PROCESSING...`;
+            if (submitBtn.disabled) return;
+            
+            submitBtn.innerHTML = `<span class="animate-pulse">RECORDING...</span>`;
+            
             setTimeout(() => {
-                formContainer.classList.add('hidden');
-                successContainer.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                formContainer.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    formContainer.classList.add('hidden');
+                    successContainer.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 300);
             }, 800);
         });
     </script>
